@@ -1,0 +1,52 @@
+[
+    {
+      "intrebare": "Care este piesa vestimentară considerată esențială în garderoba unei femei?",
+      "variante": ["Jeans", "Hanorac", "Cămașă cu dungi", "Little black dress"],
+      "corect": 3
+    },
+    {
+      "intrebare": "Ce înseamnă “haute couture”?",
+      "variante": ["Îmbrăcăminte vintage", "Îmbrăcăminte sport", "Modă de lux, făcută la comandă", "Modă ieftină"],
+      "corect": 2
+    },
+    {
+      "intrebare": "Ce țesătură este obținută din coconii viermilor de mătase?",
+      "variante": ["Bumbac", "In", "Mătase", "Lână"],
+      "corect": 2
+    },
+    {
+      "intrebare": "Ce tip de pantofi sunt „stiletto”?",
+      "variante": ["Adidași", "Pantofi cu toc subțire și înalt", "Ghete", "Balerini"],
+      "corect": 1
+    },
+    {
+      "intrebare": "Cine a lansat brandul de modă „Off-White”?",
+      "variante": ["Karl Lagerfeld", "Giorgio Armani", "Donatella Versace", "Virgil Abloh"],
+      "corect": 3
+    },
+    {
+      "intrebare": "Ce piesă vestimentară este specifică sezonului rece?",
+      "variante": ["Tricou", "Pantaloni scurți", "Geacă groasă", "Sandale"],
+      "corect": 2
+    },
+    {
+      "intrebare": "Ce înseamnă codul “XS” pe eticheta unui articol de îmbrăcăminte?",
+      "variante": ["Extra stilat", "Extra simplu", "Extra scump", "Extra small"],
+      "corect": 3
+    },
+    {
+      "intrebare": "Care este materialul cel mai potrivit pentru hainele de vară?",
+      "variante": ["Lână", "Bumbac", "Piele", "Poliester"],
+      "corect": 1
+    },
+    {
+      "intrebare": "Ce articol este considerat un accesoriu?",
+      "variante": ["Rochie", "Geantă", "Pulover", "Blugi"],
+      "corect": 1
+    },
+    {
+      "intrebare": "Cum se numește stilul vestimentar inspirat din moda anilor trecuți?",
+      "variante": ["Modern", "Business", "Vintage", "Casual"],
+      "corect": 2
+    }
+]  

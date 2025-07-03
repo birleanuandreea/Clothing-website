@@ -1,0 +1,15 @@
+<form action="/rezultat-chestionar" method="POST">
+    <% intrebari.forEach((intrebare, index) => { %>
+        <fieldset>
+            <legend><%= intrebare.intrebare %></legend>
+            <% intrebare.variante.forEach((varianta, i) => { %>
+                <label>
+                    <input type="radio" name="intrebare<%= index %>" value="<%= i %>" required>
+                    <%= varianta %>
+                </label><br/>
+            <% }); %>
+        </fieldset>
+        <br/>
+    <% }); %>
+    <button type="submit">Submit</button>
+</form>

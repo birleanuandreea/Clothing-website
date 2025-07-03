@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ro-RO">
+    <head>
+        <meta charset="UTF-8">
+        <title>Îmbrăcăminte</title>
+        <link rel="stylesheet" href="/stil.css">
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    </head> 
+    <body>
+        <header>
+            <h1>Magazin Fashion</h1>
+                <% if (utilizator) { %>
+                    <p>Autentificat ca <%= utilizator.prenume %> <%= utilizator.nume %></p>
+                    <form action="/delogare" method="get">
+                        <button id="delogare" type="submit">Delogare</button>
+                    </form>
+                <% } %>
+                <br>
+        </header>
+        <nav>
+            <a href="/">Acasă</a>
+            <a href="/chestionar">Chestionar</a>
+            <a href="/autentificare">Autentificare</a>
+            <a href="/vizualizare-cos">Coș</a>
+            <% if(admin) { %>
+                <a href="/admin">Admin</a>
+            <% } %>
+        </nav>        
+        <main>
+            <%- body %>
+        </main>
+        <footer>
+            <p>&copy; 2025 Magazin Fashion</p>
+        </footer>            
+    </body>       
+</html>

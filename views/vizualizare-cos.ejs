@@ -1,0 +1,42 @@
+<div class="cos-container">
+        <h1>Coșul meu de cumpărături</h1>
+        
+        <% if (produse && produse.length > 0) { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nume produs</th>
+                    <th>Preț unitar (RON)</th>
+                    <th>Cantitate</th>
+                    <th>Subtotal (RON)</th>
+                </tr>
+            </thead>
+           <% produse.forEach(function(produs) { %>       
+            <tbody>
+                <tr>
+                    <td><%= produs.nume %></td>
+                    <td><%= produs.pret %></td>
+                    <td><%= produs.cantitate %></td>
+                    <td><%= (produs.pret * produs.cantitate).toFixed(2) %></td>
+                </tr>
+            </tbody>
+
+            <% }) %>
+        </table>
+
+            
+        <div class="total">
+            <p>Total: <strong><%= total.toFixed(2) %> RON</strong></p>
+        </div>
+            
+        <div class="actiuni">
+            <a href="/" class="test">Continuă cumpărăturile</a>
+        </div>
+        <% } else { %>
+            <div class="gol">
+                <h2>Coșul tău este gol</h2>
+                <p>Nu ai niciun produs în coș momentan.</p>
+                <a href="/" class="test">Înapoi la cumpărături</a>
+            </div>
+        <% } %>
+    </div>

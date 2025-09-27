@@ -1,0 +1,66 @@
+<section>
+    <% if (utilizator) { %>
+        <p style="font-size: 1.5em;"><strong>Bine ai venit, <%= utilizator.prenume %> <%= utilizator.nume %>!</strong></p>
+    <% } %>
+    <h2>Descoperă cele mai noi tendințe în modă!</h2>
+    <p>Explorează colecțiile noastre de îmbrăcăminte pentru femei și bărbați, create pentru stilul tău unic.</p>
+    
+    <!-- Sectiunea pentru administrarea bazei de date -->
+    <article id="baza">
+        <form action="/creare-bd" method="GET">
+            <button type="submit">Creare BD</button>
+        </form>
+        <form action="/incarcare-bd" method="GET">
+            <button type="submit">Încărcare BD</button>
+        </form>
+    </article>
+    
+    <!-- Sectiunea pentru afisarea produselor -->
+    <article id="produse">
+        <h3 style="font-size: 1.5em;">Produsele noastre</h3>
+        <% if (!utilizator) { %>
+            <p class="alert">Trebuie să te autentifici înainte să adaugi produse în coș.</p>
+        <% } %>
+        <% if (produse && produse.length > 0) { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NUME</th>
+                        <th>DESCRIERE</th>
+                        <th>PREȚ</th>
+                        <% if (utilizator) { %>
+                            <th>ACȚIUNI</th>
+                        <% } %>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% produse.forEach(function(produs) { %>
+                        <tr>
+                            <td><%= produs.id %></td>
+                            <td><%= produs.nume %></td>
+                            <td><%= produs.descriere %></td>
+                            <td><%= produs.pret %> RON</td>
+                            <% if (utilizator) { %>
+                                <td>
+                                    <a href="/adaugare_cos?id=<%= produs.id %>" class="btn-adauga">Adaugă în coș</a>
+                                </td>
+                            <% } %>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p>Nu există produse disponibile momentan.</p>
+        <% } %>
+    </article>
+    
+    <!-- Sectiunea pentru afisarea cosului -->
+    <% if (utilizator && cos && cos.length > 0) { %>
+        <article id="cos-info">
+            <h3>Coșul tău</h3>
+            <p>Ai <strong><%= cos.length %></strong> produse în coș.</p>
+            <a href="/vizualizare-cos" class="test">Vezi coșul</a>
+        </article>
+    <% } %>
+</section>
